@@ -24,6 +24,9 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "@zumer/snapdom": "^2.0.2",
-    "jspdf": "^4.2.0"
+    "gl-transition": "^2.1.0",
+    "gl-transitions": "^1.76.1",
+    "jspdf": "^4.2.0",
+    "shaders": "^4.0.5"
   }
 }

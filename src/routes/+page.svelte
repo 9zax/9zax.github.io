@@ -1,6 +1,8 @@
 <script>
   import { base } from "$app/paths";
   import Logo from "$lib/components/Logo.svelte";
+  import GLProfile from "$lib/components/GLProfile.svelte";
+  import ShaderBackground from "$lib/components/ShaderBackground.svelte";
   import { onMount } from "svelte";
   import { t, locale, toggleLocale } from "$lib/stores/i18n.js";
 
@@ -51,14 +53,58 @@
       projects: [
         {
           name: $t("experience.exp1_p1_name"),
-          role: "Frontend",
+          role: "Senior Frontend Developer",
           description: $t("experience.exp1_p1_desc"),
-          technologies: ["React", "Swift (IOS)", "Flutter"],
+          technologies: [
+            "React",
+            "TypeScript",
+            "Tailwind CSS v4",
+            "Node.js",
+            "Prisma",
+            "PostgreSQL",
+            "Vitest",
+          ],
         },
         {
           name: $t("experience.exp1_p2_name"),
-          role: "Full Stack",
+          role: "Senior Frontend Developer",
           description: $t("experience.exp1_p2_desc"),
+          technologies: [
+            "React",
+            "Tailwind CSS",
+            "Storybook",
+            "Design Tokens",
+            "GitHub Actions",
+            "GitHub Packages",
+          ],
+        },
+        {
+          name: $t("experience.exp1_p3_name"),
+          role: "Full Stack",
+          description: $t("experience.exp1_p3_desc"),
+          technologies: [
+            "Anthropic API (LLM)",
+            "Shell",
+            "GitHub Actions",
+            "TypeScript",
+          ],
+        },
+      ],
+    },
+    {
+      company: $t("experience.exp2_company"),
+      period: $t("experience.exp2_period"),
+      projects: [
+        {
+          name: $t("experience.exp2_p1_name"),
+          role: "Frontend",
+          description: $t("experience.exp2_p1_desc"),
+          technologies: ["React", "Swift (IOS)", "Flutter"],
+        },
+        {
+          name: $t("experience.exp2_p2_name"),
+          role: "Full Stack",
+          description: $t("experience.exp2_p2_desc"),
           technologies: [
             "Vue",
             "Nuxt",
@@ -72,33 +118,33 @@
           ],
         },
         {
-          name: $t("experience.exp1_p3_name"),
+          name: $t("experience.exp2_p3_name"),
           role: "Full Stack",
-          description: $t("experience.exp1_p3_desc"),
+          description: $t("experience.exp2_p3_desc"),
           technologies: ["SvelteKit", "Supabase", "AI (LLM)", "Tailwind CSS"],
         },
         {
-          name: $t("experience.exp1_p4_name"),
+          name: $t("experience.exp2_p4_name"),
           role: "Frontend",
-          description: $t("experience.exp1_p4_desc"),
+          description: $t("experience.exp2_p4_desc"),
           technologies: ["Svelte", "Manifest V3"],
         },
         {
-          name: $t("experience.exp1_p5_name"),
+          name: $t("experience.exp2_p5_name"),
           role: "Full Stack",
-          description: $t("experience.exp1_p5_desc"),
+          description: $t("experience.exp2_p5_desc"),
           technologies: ["Strapi (CMS)", "Nuxt", "Vue", "Tailwind CSS"],
         },
       ],
     },
     {
-      company: $t("experience.exp2_company"),
-      period: $t("experience.exp2_period"),
+      company: $t("experience.exp3_company"),
+      period: $t("experience.exp3_period"),
       projects: [
         {
-          name: $t("experience.exp2_p1_name"),
+          name: $t("experience.exp3_p1_name"),
           role: "Senior Programmer & Technical Lead",
-          description: $t("experience.exp2_p1_desc"),
+          description: $t("experience.exp3_p1_desc"),
           technologies: [
             "SvelteKit",
             "NestJS",
@@ -116,29 +162,11 @@
             "PowerDNS",
           ],
           keyProjects: [
-            $t("experience.exp2_kp1"),
-            $t("experience.exp2_kp2"),
-            $t("experience.exp2_kp3"),
-            $t("experience.exp2_kp4"),
-            $t("experience.exp2_kp5"),
-          ],
-        },
-      ],
-    },
-    {
-      company: $t("experience.exp3_company"),
-      period: $t("experience.exp3_period"),
-      projects: [
-        {
-          name: $t("experience.exp3_p1_name"),
-          role: "Frontend",
-          description: $t("experience.exp3_p1_desc"),
-          technologies: [
-            "Angular 6",
-            "Redux",
-            "Bootstrap 4",
-            "HapiJS",
-            "NodeJS",
+            $t("experience.exp3_kp1"),
+            $t("experience.exp3_kp2"),
+            $t("experience.exp3_kp3"),
+            $t("experience.exp3_kp4"),
+            $t("experience.exp3_kp5"),
           ],
         },
       ],
@@ -151,6 +179,24 @@
           name: $t("experience.exp4_p1_name"),
           role: "Frontend",
           description: $t("experience.exp4_p1_desc"),
+          technologies: [
+            "Angular 6",
+            "Redux",
+            "Bootstrap 4",
+            "HapiJS",
+            "NodeJS",
+          ],
+        },
+      ],
+    },
+    {
+      company: $t("experience.exp5_company"),
+      period: $t("experience.exp5_period"),
+      projects: [
+        {
+          name: $t("experience.exp5_p1_name"),
+          role: "Frontend",
+          description: $t("experience.exp5_p1_desc"),
           technologies: ["PHR", "Python", "C# .Net Core"],
         },
       ],
@@ -171,11 +217,12 @@
     ],
     frontend: [
       "HTML/CSS",
+      "Tailwind CSS",
+      "React",
+      "Svelte",
       "Vue",
       "NuxtJs",
       "Angular",
-      "React",
-      "Svelte",
       "Quasar Framework",
     ],
     backend: [
@@ -184,6 +231,7 @@
       "Fastify",
       "NestJS",
       "Strapi",
+      "Prisma",
       "Go-gin",
       ".NET Core",
       "SvelteKit",
@@ -203,6 +251,8 @@
       "Kubernetes",
       "Jenkins",
       "GitLab CI",
+      "GitHub Actions",
+      "GitHub Packages",
       "ArgoCD",
       "Nginx",
       "Apache",
@@ -212,6 +262,9 @@
       "Proxmox",
     ],
     other: [
+      "Storybook",
+      "Anthropic API (LLM)",
+      "Chrome Extension (MV3)",
       "Wails",
       "Tauri",
       "Jest",
@@ -365,6 +418,27 @@
     <section
       class="min-h-screen flex flex-col justify-center pt-32 pb-12 px-6 max-w-6xl mx-auto relative"
     >
+      <!-- Aurora shader backdrop (shaders.com, WebGPU — transparent without it) -->
+      <div
+        class="absolute inset-0 overflow-hidden pointer-events-none"
+        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 45%, transparent 95%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 45%, transparent 95%);"
+      >
+        <ShaderBackground
+          type="Aurora"
+          className="w-full h-full opacity-35"
+          props={{
+            colorA: "#6d28d9",
+            colorB: "#059669",
+            colorC: "#1d4ed8",
+            intensity: 30,
+            speed: 3,
+            curtainCount: 3,
+            height: 90,
+            rayDensity: 12,
+          }}
+        />
+      </div>
+
       <div class="grid lg:grid-cols-12 gap-12 items-center">
         <!-- Text Content -->
         <div
@@ -433,6 +507,8 @@
                     : 'opacity-0 scale-105 z-0'}"
                 />
               {/each}
+              <!-- GL Transitions slideshow (WebGL) over the fallback crossfade -->
+              <GLProfile images={profileImages} />
             </div>
             <!-- Tech floating badges -->
             <div
@@ -584,10 +660,12 @@
                         ? $t("experience.role_frontend")
                         : project.role === "Full Stack"
                           ? $t("experience.role_fullstack")
-                          : project.role ===
-                              "Senior Programmer & Technical Lead"
-                            ? $t("experience.role_senior_lead")
-                            : project.role}
+                          : project.role === "Senior Frontend Developer"
+                            ? $t("experience.role_senior_frontend")
+                            : project.role ===
+                                "Senior Programmer & Technical Lead"
+                              ? $t("experience.role_senior_lead")
+                              : project.role}
                     </p>
                     <p
                       class="text-zinc-400 font-light leading-relaxed text-sm mb-5 max-w-2xl whitespace-pre-line"
