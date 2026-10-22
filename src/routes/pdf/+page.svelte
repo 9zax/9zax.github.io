@@ -355,9 +355,9 @@
         </div>
         <div class="flex flex-col items-center gap-1">
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://9zax.github.io/"
+            src="{base}/qr-portfolio.svg"
             alt="Portfolio QR"
-            class="w-16 h-16 border border-zinc-200 p-0.5 rounded"
+            class="w-16 h-16 aspect-square object-contain shrink-0 border border-zinc-200 bg-white rounded"
           />
           <span
             class="text-[8px] text-zinc-400 font-bold uppercase tracking-tighter"
