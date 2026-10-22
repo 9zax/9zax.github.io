@@ -76,15 +76,7 @@
           name: t.experience.exp1_p4_name,
           role: t.experience.role_fullstack,
           description: t.experience.exp1_p4_desc,
-          technologies: [
-            "Chrome MV3",
-            "OpenAI Realtime API",
-            "WebSocket Relay",
-            "Gemini API",
-            "Google TTS",
-            "Tauri",
-            "Typhoon ASR",
-          ],
+          technologies: [],
         },
       ],
     },
@@ -286,13 +278,6 @@
     fitSheet();
     window.addEventListener("resize", fitSheet);
 
-    // Let fonts settle before opening the print dialog (Save as PDF)
-    const fontsReady = document.fonts?.ready ?? Promise.resolve();
-    Promise.all([
-      fontsReady,
-      new Promise((r) => setTimeout(r, 1200)),
-    ]).then(() => setTimeout(() => window.print(), 300));
-
     return () => window.removeEventListener("resize", fitSheet);
   });
 </script>
@@ -310,20 +295,25 @@
     ? "font-['Sarabun']"
     : "font-['Inter']"}"
 >
-  <!-- Screen-only helper bar -->
+  <!-- Screen-only action bar: direct PDF download (generated file) + browser print -->
   <div
-    class="no-print fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-zinc-900/95 backdrop-blur text-white text-xs sm:text-sm font-medium pl-4 pr-2 py-2 rounded-full shadow-2xl border border-zinc-700"
+    class="no-print fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-zinc-900/95 backdrop-blur text-white text-xs sm:text-sm font-medium pl-4 pr-2 py-2 rounded-full shadow-2xl border border-zinc-700"
   >
     <span class="px-1 whitespace-nowrap"
-      >{lang === "th"
-        ? "CV ขนาด A4 — บันทึกเป็น PDF ผ่านหน้าต่างปริ้น"
-        : "A4 CV — use the print dialog to save as PDF"}</span
+      >{lang === "th" ? "CV ขนาด A4" : "A4 CV"}</span
     >
+    <a
+      href="{base}/cv-{lang}.pdf"
+      download="Nakarin-Weerasak-CV.pdf"
+      class="px-4 py-1.5 bg-white text-zinc-900 rounded-full font-semibold hover:bg-zinc-200 transition-colors no-underline"
+    >
+      {lang === "th" ? "ดาวน์โหลด PDF" : "Download PDF"}
+    </a>
     <button
-      class="px-4 py-1.5 bg-white text-zinc-900 rounded-full font-semibold hover:bg-zinc-200 transition-colors"
+      class="px-4 py-1.5 border border-zinc-600 text-zinc-200 rounded-full font-semibold hover:bg-zinc-800 transition-colors"
       on:click={() => window.print()}
     >
-      {lang === "th" ? "บันทึก PDF" : "Save PDF"}
+      {lang === "th" ? "ปริ้น" : "Print"}
     </button>
   </div>
 
@@ -390,31 +380,19 @@
         {t.experience.title}
       </h3>
       <table class="w-full text-sm border-collapse border border-zinc-300">
-        <thead class="bg-blue-50 text-[#1e3a8a]">
-          <tr>
-            <th class="border border-zinc-300 p-2 text-left w-6/12 md:w-1/4"
-              >{lang === "th" ? "บริษัท & ระยะเวลา" : "Company & Period"}</th
-            >
-            <th class="border border-zinc-300 p-2 text-left"
-              >{lang === "th" ? "รายละเอียดโปรเจกต์" : "Project Details"}</th
-            >
-          </tr>
-        </thead>
         <tbody>
           {#each experiences as exp}
-            {#each exp.projects as project, i}
+            <!-- Company row: no rowspan, so pages can break between projects -->
+            <tr>
+              <td class="border border-zinc-300 p-2.5 bg-blue-50">
+                <span class="font-bold text-zinc-900">{exp.company}</span>
+                <span class="text-xs text-[#1e3a8a] font-semibold ml-2"
+                  >{exp.period}</span
+                >
+              </td>
+            </tr>
+            {#each exp.projects as project}
               <tr>
-                {#if i === 0}
-                  <td
-                    class="border border-zinc-300 p-3 align-top"
-                    rowspan={exp.projects.length}
-                  >
-                    <div class="font-bold text-zinc-900">{exp.company}</div>
-                    <div class="text-xs text-[#1e3a8a] mt-1 font-semibold">
-                      {exp.period}
-                    </div>
-                  </td>
-                {/if}
                 <td class="border border-zinc-300 p-3">
                   <div class="font-bold text-zinc-900 text-sm mb-0.5">
                     {project.name}
@@ -536,7 +514,7 @@
     </section>
 
     <!-- Education -->
-    <section class="mb-6 print:break-before-page">
+    <section class="mb-6">
       <h3
         class="text-lg font-['Outfit'] font-bold text-[#1e3a8a] mb-3 uppercase tracking-wider border-b-2 border-[#1e3a8a] pb-1"
       >
@@ -567,7 +545,7 @@
     </section>
 
     <!-- Contact Information -->
-    <section class="mb-6 page-break-avoid">
+    <section class="mb-6">
       <h3
         class="text-lg font-['Outfit'] font-bold text-[#1e3a8a] mb-3 uppercase tracking-wider border-b-2 border-[#1e3a8a] pb-1"
       >
@@ -685,6 +663,21 @@
     background-color: #e4e4e7 !important;
   }
 
+  /* Borderless CV: no boxes around table cells — light row dividers instead */
+  .pdf-page :global(table) {
+    border: none !important;
+  }
+  .pdf-page :global(td),
+  .pdf-page :global(th) {
+    border: none !important;
+  }
+  .pdf-page tr {
+    border-bottom: 1px solid #e4e4e7;
+  }
+  .pdf-page tbody tr:last-child {
+    border-bottom: none;
+  }
+
   /* Fixed A4 sheet — same geometry on screen and in print, never responsive */
   .pdf-page {
     width: 210mm;
@@ -702,14 +695,15 @@
     }
   }
 
-  /* Print Optimization */
+  /* Print Optimization — page margins come from @page so EVERY page gets them */
   @media print {
     @page {
       size: A4 portrait;
-      margin: 0;
+      margin: 11mm 11mm 11mm 11mm;
     }
+    :global(html),
     :global(body) {
-      background-color: white !important;
+      background: white !important;
       margin: 0;
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
@@ -727,8 +721,24 @@
       box-shadow: none;
       border-radius: 0;
       min-height: auto;
+      width: auto;
+      padding: 0;
     }
-    .pdf-page :global(tr) {
+    .pdf-page h3 {
+      break-after: avoid;
+      page-break-after: avoid;
+      margin-bottom: 3mm;
+    }
+    .pdf-page section {
+      margin-bottom: 4.5mm;
+    }
+    .pdf-page :global(p) {
+      line-height: 1.5 !important;
+    }
+    .pdf-page :global(td) {
+      padding: 2.6mm 3mm !important;
+    }
+    .pdf-page tr {
       break-inside: avoid;
       page-break-inside: avoid;
     }

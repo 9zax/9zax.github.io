@@ -93,15 +93,7 @@
           name: $t("experience.exp1_p4_name"),
           role: "Full Stack",
           description: $t("experience.exp1_p4_desc"),
-          technologies: [
-            "Chrome MV3",
-            "OpenAI Realtime API",
-            "WebSocket Relay",
-            "Gemini API",
-            "Google TTS",
-            "Tauri",
-            "Typhoon ASR",
-          ],
+          technologies: [],
         },
       ],
     },
@@ -441,20 +433,20 @@
       <!-- Aurora shader backdrop (shaders.com, WebGPU — transparent without it) -->
       <div
         class="absolute inset-0 overflow-hidden pointer-events-none"
-        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 45%, transparent 95%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 45%, transparent 95%);"
+        style="mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 50%, transparent 98%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95) 50%, transparent 98%);"
       >
         <ShaderBackground
           type="Aurora"
-          className="w-full h-full opacity-35"
+          className="w-full h-full opacity-55"
           props={{
             colorA: "#6d28d9",
-            colorB: "#059669",
-            colorC: "#1d4ed8",
-            intensity: 30,
-            speed: 3,
-            curtainCount: 3,
-            height: 90,
-            rayDensity: 12,
+            colorB: "#10b981",
+            colorC: "#2563eb",
+            intensity: 45,
+            speed: 4,
+            curtainCount: 4,
+            height: 110,
+            rayDensity: 18,
           }}
         />
       </div>
@@ -806,8 +798,42 @@
       </div>
     </section>
 
+    <!-- Interactive cursor trail (shaders.com) over the whole page -->
+    <div
+      class="fixed inset-0 z-40 pointer-events-none mix-blend-screen opacity-60"
+    >
+      <ShaderBackground
+        type="CursorTrail"
+        className="w-full h-full"
+        props={{
+          colorA: "#34d399",
+          colorB: "#8b5cf6",
+          radius: 1.2,
+          length: 0.9,
+          softness: 0.7,
+        }}
+      />
+    </div>
+
     <!-- Contact & Footer -->
-    <section id="contact" class="pt-24 pb-12 px-6">
+    <section id="contact" class="relative pt-24 pb-12 px-6">
+      <!-- Flowing gradient shader behind the contact cards -->
+      <div
+        class="absolute inset-0 overflow-hidden pointer-events-none"
+        style="mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 80%, transparent);"
+      >
+        <ShaderBackground
+          type="FlowingGradient"
+          className="w-full h-full opacity-30"
+          props={{
+            colorA: "#020617",
+            colorB: "#4c1d95",
+            colorC: "#1e3a8a",
+            colorD: "#0f766e",
+            speed: 1.5,
+          }}
+        />
+      </div>
       <div class="max-w-5xl mx-auto">
         <h2
           class="text-4xl md:text-5xl font-['Outfit'] font-bold mb-16 text-center text-white relative"

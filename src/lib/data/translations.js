@@ -40,7 +40,7 @@ export const translations = {
         "Develop AI-powered internal tooling: an AI agent for portal workflows (shell-based automation) and LLM integrations using the Anthropic API, including an automated GitHub PR reviewer. Focused on practical developer-experience gains — code review, workflow automation, and integration testing.",
       exp1_p4_name: "Mali Meeting (AI Meeting Assistant)",
       exp1_p4_desc:
-        "Built the Mali Meeting product line — AI meeting assistants for Thai teams. The core is a Chrome (MV3) side-panel extension that captures meeting audio (tab + mic, macOS loopback) and streams live Thai captions via OpenAI Realtime through a WebSocket relay that keeps API keys server-side, then auto-drafts summaries and files action items to Jira/Notion/GitHub. Related components include an AI bot that joins Google Meet and speaks via Gemini + Google TTS, and a Tauri desktop app doing Thai transcription with speaker diarization (Typhoon ASR).",
+        "Built the Mali Meeting product line — AI meeting assistants for Thai teams. The core is a browser side-panel that captures meeting audio and streams live Thai captions in real time, then auto-drafts meeting summaries and files action items to Jira/Notion/GitHub. Related components include an AI bot that joins online meetings and responds with voice, and a desktop app for Thai transcription with automatic speaker separation.",
 
       exp2_company: "ODT",
       exp2_period: "May 2022 - Mar 2026",
@@ -161,7 +161,7 @@ export const translations = {
         "พัฒนาเครื่องมือภายในที่ขับเคลื่อนด้วย AI: AI Agent สำหรับ Workflow ของ Portal (Automation ด้วย Shell Script) และการเชื่อมต่อ LLM ผ่าน Anthropic API รวมถึงระบบตรวจ PR บน GitHub แบบอัตโนมัติ โดยเน้นประโยชน์จริงต่อนักพัฒนา เช่น Code Review, การทำงานอัตโนมัติ และ Integration Testing",
       exp1_p4_name: "Mali Meeting (ผู้ช่วยประชุมด้วย AI)",
       exp1_p4_desc:
-        "พัฒนาสายผลิตภัณฑ์ Mali Meeting — ผู้ช่วยประชุมด้วย AI สำหรับทีมคนไทย หัวใจหลักคือ Chrome Extension (MV3) แบบ side-panel ที่จับเสียงประชุม (เสียงแท็บ + ไมค์ รวมถึง Loopback บน macOS) แล้วถอดข้อความภาษาไทยแบบสดผ่าน OpenAI Realtime โดยมี WebSocket relay เก็บ API key ไว้ฝั่งเซิร์ฟเวอร์ พร้อมสรุปการประชุมอัตโนมัติและแปลง action items ไปเป็น Jira/Notion/GitHub Issues ส่วนประกอบที่เกี่ยวข้อง ได้แก่ AI bot ที่เข้าร่วม Google Meet อัตโนมัติและตอบด้วยเสียงผ่าน Gemini + Google TTS และแอป Tauri บนเดสก์ท็อปสำหรับถอดเสียงภาษาไทยพร้อมแยกผู้พูด (Typhoon ASR)",
+        "พัฒนาสายผลิตภัณฑ์ Mali Meeting — ผู้ช่วยประชุมด้วย AI สำหรับทีมคนไทย หัวใจหลักคือ side-panel บนเบราว์เซอร์ที่จับเสียงประชุมแล้วถอดข้อความภาษาไทยแสดงสดแบบเรียลไทม์ พร้อมสรุปการประชุมอัตโนมัติและแปลง action items ไปเป็น Jira/Notion/GitHub Issues ส่วนประกอบที่เกี่ยวข้อง ได้แก่ AI bot ที่เข้าร่วมการประชุมออนไลน์และตอบโต้ด้วยเสียง และแอปเดสก์ท็อปสำหรับถอดเสียงภาษาไทยพร้อมแยกผู้พูดอัตโนมัติ",
 
       exp2_company: "ODT",
       exp2_period: "พ.ค. 2022 - มี.ค. 2026",
