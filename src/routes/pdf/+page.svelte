@@ -36,14 +36,58 @@
       projects: [
         {
           name: t.experience.exp1_p1_name,
-          role: t.experience.role_frontend,
+          role: t.experience.role_senior_frontend,
           description: t.experience.exp1_p1_desc,
-          technologies: ["React", "Swift (IOS)", "Flutter"],
+          technologies: [
+            "React",
+            "TypeScript",
+            "Tailwind CSS v4",
+            "Node.js",
+            "Prisma",
+            "PostgreSQL",
+            "Vitest",
+          ],
         },
         {
           name: t.experience.exp1_p2_name,
-          role: t.experience.role_fullstack,
+          role: t.experience.role_senior_frontend,
           description: t.experience.exp1_p2_desc,
+          technologies: [
+            "React",
+            "Tailwind CSS",
+            "Storybook",
+            "Design Tokens",
+            "GitHub Actions",
+            "GitHub Packages",
+          ],
+        },
+        {
+          name: t.experience.exp1_p3_name,
+          role: t.experience.role_fullstack,
+          description: t.experience.exp1_p3_desc,
+          technologies: [
+            "Anthropic API (LLM)",
+            "Shell",
+            "GitHub Actions",
+            "TypeScript",
+          ],
+        },
+      ],
+    },
+    {
+      company: t.experience.exp2_company,
+      period: t.experience.exp2_period,
+      projects: [
+        {
+          name: t.experience.exp2_p1_name,
+          role: t.experience.role_frontend,
+          description: t.experience.exp2_p1_desc,
+          technologies: ["React", "Swift (IOS)", "Flutter"],
+        },
+        {
+          name: t.experience.exp2_p2_name,
+          role: t.experience.role_fullstack,
+          description: t.experience.exp2_p2_desc,
           technologies: [
             "Vuejs",
             "NuxtJs",
@@ -55,33 +99,33 @@
           ],
         },
         {
-          name: t.experience.exp1_p3_name,
+          name: t.experience.exp2_p3_name,
           role: t.experience.role_fullstack,
-          description: t.experience.exp1_p3_desc,
+          description: t.experience.exp2_p3_desc,
           technologies: ["SvelteKit", "Supabase", "AI (LLM)", "Tailwind CSS"],
         },
         {
-          name: t.experience.exp1_p4_name,
+          name: t.experience.exp2_p4_name,
           role: t.experience.role_frontend,
-          description: t.experience.exp1_p4_desc,
+          description: t.experience.exp2_p4_desc,
           technologies: ["Svelte", "Manifest V3"],
         },
         {
-          name: t.experience.exp1_p5_name,
+          name: t.experience.exp2_p5_name,
           role: t.experience.role_fullstack,
-          description: t.experience.exp1_p5_desc,
+          description: t.experience.exp2_p5_desc,
           technologies: ["Nuxt", "Vue", "Tailwind CSS"],
         },
       ],
     },
     {
-      company: t.experience.exp2_company,
-      period: t.experience.exp2_period,
+      company: t.experience.exp3_company,
+      period: t.experience.exp3_period,
       projects: [
         {
-          name: t.experience.exp2_p1_name,
+          name: t.experience.exp3_p1_name,
           role: t.experience.role_senior_lead,
-          description: t.experience.exp2_p1_desc,
+          description: t.experience.exp3_p1_desc,
           technologies: [
             "SvelteKit",
             "NestJS",
@@ -97,29 +141,11 @@
             "Proxmox",
           ],
           keyProjects: [
-            t.experience.exp2_kp1,
-            t.experience.exp2_kp2,
-            t.experience.exp2_kp3,
-            t.experience.exp2_kp4,
-            t.experience.exp2_kp5,
-          ],
-        },
-      ],
-    },
-    {
-      company: t.experience.exp3_company,
-      period: t.experience.exp3_period,
-      projects: [
-        {
-          name: t.experience.exp3_p1_name,
-          role: t.experience.role_frontend,
-          description: t.experience.exp3_p1_desc,
-          technologies: [
-            "Angular 6",
-            "Redux",
-            "Bootstrap 4",
-            "HapiJS",
-            "NodeJS",
+            t.experience.exp3_kp1,
+            t.experience.exp3_kp2,
+            t.experience.exp3_kp3,
+            t.experience.exp3_kp4,
+            t.experience.exp3_kp5,
           ],
         },
       ],
@@ -132,6 +158,24 @@
           name: t.experience.exp4_p1_name,
           role: t.experience.role_frontend,
           description: t.experience.exp4_p1_desc,
+          technologies: [
+            "Angular 6",
+            "Redux",
+            "Bootstrap 4",
+            "HapiJS",
+            "NodeJS",
+          ],
+        },
+      ],
+    },
+    {
+      company: t.experience.exp5_company,
+      period: t.experience.exp5_period,
+      projects: [
+        {
+          name: t.experience.exp5_p1_name,
+          role: t.experience.role_frontend,
+          description: t.experience.exp5_p1_desc,
           technologies: ["PHR", "Python", "C# .Net Core"],
         },
       ],
@@ -150,14 +194,31 @@
       "Kotlin",
       "Dart",
     ],
-    frontend: ["HTML/CSS", "Vue", "NuxtJs", "Angular", "React", "Svelte"],
-    backend: ["Node.js", "Express", "Fastify", "NestJS", "Go-gin", ".NET Core"],
+    frontend: [
+      "HTML/CSS",
+      "Tailwind CSS",
+      "React",
+      "Svelte",
+      "Vue",
+      "NuxtJs",
+      "Angular",
+    ],
+    backend: [
+      "Node.js",
+      "Express",
+      "Fastify",
+      "NestJS",
+      "Prisma",
+      "Go-gin",
+      ".NET Core",
+    ],
     database: ["MongoDB", "Firebase", "PostgreSQL", "SQLite", "MySQL"],
     devops: [
       "Docker",
       "Kubernetes",
       "Jenkins",
       "GitLab CI",
+      "GitHub Actions",
       "Nginx",
       "Cloudflare",
     ],
@@ -185,6 +246,15 @@
   $: textPhone = t.contact.phone || "Phone";
   $: textLocation = t.contact.location || "Location";
 
+  // Fixed A4 sheet — visually scaled to fit small screens (zoom), untouched in print
+  let sheet;
+  const fitSheet = () => {
+    if (!sheet) return;
+    const base = sheet.offsetWidth || 794; // 210mm ≈ 794px
+    const scale = Math.min(1, (window.innerWidth - 16) / base);
+    sheet.style.zoom = scale < 0.99 ? String(scale) : "";
+  };
+
   onMount(() => {
     // Read the language parameter from the URL, default to 'en'
     const urlLang = $page.url.searchParams.get("lang");
@@ -192,10 +262,17 @@
       lang = "th";
     }
 
-    // Wait a brief moment for DOM reactivity to settle the translations, then automatically trigger print dialog.
-    setTimeout(() => {
-      window.print();
-    }, 2000);
+    fitSheet();
+    window.addEventListener("resize", fitSheet);
+
+    // Let fonts settle before opening the print dialog (Save as PDF)
+    const fontsReady = document.fonts?.ready ?? Promise.resolve();
+    Promise.all([
+      fontsReady,
+      new Promise((r) => setTimeout(r, 1200)),
+    ]).then(() => setTimeout(() => window.print(), 300));
+
+    return () => window.removeEventListener("resize", fitSheet);
   });
 </script>
 
@@ -208,11 +285,28 @@
 </svelte:head>
 
 <div
-  class="print-container bg-white min-h-screen text-zinc-900 {lang === 'th'
+  class="print-container min-h-screen text-zinc-900 {lang === 'th'
     ? "font-['Sarabun']"
     : "font-['Inter']"}"
 >
-  <div class="max-w-[210mm] mx-auto p-12 bg-white pdf-page">
+  <!-- Screen-only helper bar -->
+  <div
+    class="no-print fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-zinc-900/95 backdrop-blur text-white text-xs sm:text-sm font-medium pl-4 pr-2 py-2 rounded-full shadow-2xl border border-zinc-700"
+  >
+    <span class="px-1 whitespace-nowrap"
+      >{lang === "th"
+        ? "CV ขนาด A4 — บันทึกเป็น PDF ผ่านหน้าต่างปริ้น"
+        : "A4 CV — use the print dialog to save as PDF"}</span
+    >
+    <button
+      class="px-4 py-1.5 bg-white text-zinc-900 rounded-full font-semibold hover:bg-zinc-200 transition-colors"
+      on:click={() => window.print()}
+    >
+      {lang === "th" ? "บันทึก PDF" : "Save PDF"}
+    </button>
+  </div>
+
+  <div class="pdf-page bg-white" bind:this={sheet}>
     <!-- Header -->
     <header
       class="border-b-2 border-[#1e3a8a] pb-6 mb-8 flex justify-between items-end"
@@ -555,9 +649,26 @@
 </div>
 
 <style>
-  /* Reset background completely for the print container */
+  /* Neutral backdrop on screen; the sheet itself is always fixed A4 */
   :global(body) {
-    background-color: white !important;
+    background-color: #e4e4e7 !important;
+  }
+
+  /* Fixed A4 sheet — same geometry on screen and in print, never responsive */
+  .pdf-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 15mm;
+    box-sizing: border-box;
+    background: white;
+  }
+
+  @media screen {
+    .pdf-page {
+      margin: 1.5rem auto 5rem;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+      border-radius: 2px;
+    }
   }
 
   /* Print Optimization */
@@ -566,7 +677,8 @@
       size: A4 portrait;
       margin: 0;
     }
-    body {
+    :global(body) {
+      background-color: white !important;
       margin: 0;
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
@@ -575,17 +687,23 @@
     :global(#main-nav) {
       display: none !important;
     }
-    .print-container {
-      width: 100%;
-      height: 100%;
-      background: white;
+    .no-print {
+      display: none !important;
     }
     .pdf-page {
-      padding: 15mm 15mm;
-      width: 210mm;
-      min-height: 297mm;
-      box-sizing: border-box;
-      page-break-after: always;
+      zoom: 1 !important;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      min-height: auto;
+    }
+    .pdf-page :global(tr) {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .page-break-avoid {
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
   }
 </style>
