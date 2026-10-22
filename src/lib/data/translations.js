@@ -8,15 +8,15 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      subtitle: "Full-Stack Developer with DevOps Experience",
+      subtitle: "Senior Frontend Developer with Full-Stack Experience",
       getInTouch: "Get In Touch",
       viewWork: "View Work",
       scrollDown: "Scroll Down",
     },
     about: {
       title: "About Me",
-      p1: "I'm a passionate Full-Stack Developer with extensive experience in modern web technologies and DevOps practices. With expertise spanning from frontend frameworks like React, Vue, and Svelte to backend technologies including Node.js, NestJS, and Go, I build scalable and performant applications.",
-      p2: "My experience includes leading teams, designing system architectures, and implementing CI/CD pipelines. I'm particularly interested in cloud infrastructure, containerization, and automation to deliver robust solutions.",
+      p1: "I'm a Senior Frontend Developer at TechleadNext, building the company's core enterprise portal with React, TypeScript, and a token-driven design system. Over 8 years I've shipped production software across the stack — Svelte/SvelteKit and React frontends, Node.js backends (Express, Fastify, NestJS, Prisma), and mobile apps in Flutter and Swift for banking, telecom, and enterprise clients.",
+      p2: "My background includes leading the development of a cross-platform banking app (Customer 360 for TTB), maintaining a shared design system with Storybook, and setting up CI/CD pipelines from Jenkins and GitLab CI to GitHub Actions. Lately I focus on design systems, UI architecture, and using AI/LLM tooling to improve developer workflows.",
       yearsExp: "Years Experience",
       projectsCompleted: "Projects Completed",
       technologies: "Technologies",
@@ -25,52 +25,66 @@ export const translations = {
       title: "Work Experience",
       role_frontend: "Frontend",
       role_fullstack: "Full Stack",
+      role_senior_frontend: "Senior Frontend Developer",
       role_senior_lead: "Senior Programmer & Technical Lead",
-      exp1_company: "ODT",
-      exp1_period: "May 2022 - Present",
-      exp1_p1_name:
-        "TTB Project, Retail Lending Team, Common Apply Team, Tep Team",
+      exp1_company: "TechleadNext",
+      exp1_period: "Apr 2026 - Present",
+      exp1_p1_name: "Portal 2.0 (Enterprise Portal Platform)",
       exp1_p1_desc:
-        "• Retail Lending Team: Developed Web Applications (Loan, Credit Card) with React.\n• Common Apply Team: Developed Native iOS apps (NTB - New To Bank) with Swift.\n• Tep Team: Led the development of a Cross-Platform internal application (Customer 360) using Flutter for TTB Bank's Call Center and Branch employees, implementing complex enterprise features including 360-degree Customer Profiles, Product Holdings (Assets & Liabilities), Touchpoint & Case History, Customer Suitability & Insights, RBAC Permissions, CRM Integration, and Personalized Messaging to enhance customer service capabilities.",
-      exp1_p2_name: "a-chieve social enterprise",
+        "Senior Frontend Developer for the company's core enterprise platform. Build the web frontend with React and TypeScript on a token-driven design system (Tailwind CSS v4), keeping code and Figma in sync through documented components, patterns, and drift-check workflows. Also contribute to the Node.js backend services (Express-style architecture with Prisma and PostgreSQL) covering RBAC, notifications, media, and scheduled jobs.",
+      exp1_p2_name:
+        "Design System & Component Library (Portal 2.0 / PayGenix)",
       exp1_p2_desc:
-        "Developed comprehensive platforms for the social enterprise, including:\n• Student Web Application: A platform for students and interested users to discover career paths and access guidance tools.\n• 'To School' Web Application: A dedicated portal enabling teachers to monitor, track, and support students under their care.\n• Admin CMS: A Content Management System for administrators to update system details, articles, and platform content.\n• Reporting System: Automated data reporting dashboards tailored for both teachers and administrators.",
-      exp1_p3_name: "KhunaiStory (Personal Project)",
+        "Build and maintain the shared design system used across all company products (Portal 2.0, PayGenix Merchant Dashboard): coded React + Tailwind components with per-project theming, a Storybook catalogue of every component's variants and states, and a token architecture (foundations + semantic tokens) mirroring the Figma source of truth. Set up automated npm publishing to GitHub Packages with release-tag verification via GitHub Actions CI.",
+      exp1_p3_name: "AI Agent & Developer Tooling",
       exp1_p3_desc:
+        "Develop AI-powered internal tooling: an AI agent for portal workflows (shell-based automation) and LLM integrations using the Anthropic API, including an automated GitHub PR reviewer. Focused on practical developer-experience gains — code review, workflow automation, and integration testing.",
+
+      exp2_company: "ODT",
+      exp2_period: "May 2022 - Mar 2026",
+      exp2_p1_name:
+        "TTB Project, Retail Lending Team, Common Apply Team, Tep Team",
+      exp2_p1_desc:
+        "• Retail Lending Team: Developed Web Applications (Loan, Credit Card) with React.\n• Common Apply Team: Developed Native iOS apps (NTB - New To Bank) with Swift.\n• Tep Team: Led the development of a Cross-Platform internal application (Customer 360) using Flutter for TTB Bank's Call Center and Branch employees, implementing complex enterprise features including 360-degree Customer Profiles, Product Holdings (Assets & Liabilities), Touchpoint & Case History, Customer Suitability & Insights, RBAC Permissions, CRM Integration, and Personalized Messaging to enhance customer service capabilities.",
+      exp2_p2_name: "a-chieve social enterprise",
+      exp2_p2_desc:
+        "Developed comprehensive platforms for the social enterprise, including:\n• Student Web Application: A platform for students and interested users to discover career paths and access guidance tools.\n• 'To School' Web Application: A dedicated portal enabling teachers to monitor, track, and support students under their care.\n• Admin CMS: A Content Management System for administrators to update system details, articles, and platform content.\n• Reporting System: Automated data reporting dashboards tailored for both teachers and administrators.",
+      exp2_p3_name: "KhunaiStory (Personal Project)",
+      exp2_p3_desc:
         "Developed an English learning application (app.khunaistory.com) through engaging stories. Features include AI-powered role-playing with avatars, interactive story reading, and flashcards for vocabulary practice (Oxford 3000). Built with a focus on immersive user experience and educational technology.",
-      exp1_p4_name: "Storage and Cookies Manager (Chrome Extension)",
-      exp1_p4_desc:
+      exp2_p4_name: "Storage and Cookies Manager (Chrome Extension)",
+      exp2_p4_desc:
         "Developed and published a popular open-source Google Chrome Extension (https://chromewebstore.google.com/detail/storage-and-cookies-manag/oohieppjjpdgidfhdlcjfpfmhkpflbcc) designed for web developers. Currently serving 1,000+ active users. Features include viewing, editing, adding, and deleting Cookies, LocalStorage, and SessionStorage in real-time. Built with Svelte and HTML/CSS, focusing on a clean, intuitive UI and strict adherence to Chrome's Manifest V3 security policies.",
-      exp1_p5_name: "PCW Cleaning Assessment (Free WebApp)",
-      exp1_p5_desc:
+      exp2_p5_name: "PCW Cleaning Assessment (Free WebApp)",
+      exp2_p5_desc:
         "Developed a free web application (https://cleaning.pcw.ac.th/) for PCW school. The platform enables student committees to perform daily classroom cleanliness assessments and record scores. It features a comprehensive reporting system that allows homeroom teachers, students, and staff to monitor and review the cleanliness evaluations.",
 
-      exp2_company: "Hi-Q Food Products Co., Ltd.",
-      exp2_period: "Oct 2019 – May 2022",
-      exp2_p1_name: "Internal and Public Application",
-      exp2_p1_desc:
+      exp3_company: "Hi-Q Food Products Co., Ltd.",
+      exp3_period: "Oct 2019 – May 2022",
+      exp3_p1_name: "Internal and Public Application",
+      exp3_p1_desc:
         "Team management with Agile and daily meetups with Scrum. Development of authorization systems using sessions, cookies, and JWT. Development of SSR applications using SvelteKit and database with PostgreSQL, Prisma ORM. Implementation of authorization systems using Session Cookie Authentication, JWT Authentication, and Keycloak. On-premises infrastructure setup network configuration. Use Proxmox to Manage Instant of VM. Project deployment management using Docker Nginx. Some Projects Deployment on Kubernetes. Build and deploy automation using Jenkins or GitLab CI. Reverse proxy implementation using Nginx Proxy Manager and Manage DNS with PowerDNS.",
-      exp2_kp1:
+      exp3_kp1:
         "Felina Canino Application: Developed by Svelte Frontend Framework use NestJS to Develop Backend, integrating with Navision API and storage data with MongoDB and MS SQL.",
-      exp2_kp2:
+      exp3_kp2:
         "Line Official Account (Point Reward System): Full-stack development using Svelte Implement with Line Liff Framework.",
-      exp2_kp3:
+      exp3_kp3:
         "HR Management Platform: Built an Express backend with MongoDB via Strapi V2.",
-      exp2_kp4:
+      exp3_kp4:
         "Mobile Survey Application: Created a Flutter-based solution with Firebase integration.",
-      exp2_kp5:
+      exp3_kp5:
         "Jobber Application: Optimized backend with Fastify using dual database architecture.",
 
-      exp3_company: "Saraff Infotech Co., Ltd (site AIS)",
-      exp3_period: "Jul 2018 - Oct 2019",
-      exp3_p1_name: "AIS Kiosk & E-Service Web Application",
-      exp3_p1_desc:
+      exp4_company: "Saraff Infotech Co., Ltd (site AIS)",
+      exp4_period: "Jul 2018 - Oct 2019",
+      exp4_p1_name: "AIS Kiosk & E-Service Web Application",
+      exp4_p1_desc:
         "Developed comprehensive self-service Web Applications deployed on interactive Kiosks across AIS (https://www.ais.th/) branches nationwide. Spearheaded the frontend development for core telecommunication services including the 'New Device Purchase' flow (integrating with inventory and payment gateways), the 'Mobile Number Portability' (Switch to AIS) journey, and extensive account management systems for both Prepaid and Postpaid customers. Built secure, high-performance API services to bridge the frontend with core legacy backend systems, ensuring a seamless omnichannel customer experience.",
 
-      exp4_company: "Nextwaver.NET",
-      exp4_period: "Jan 2018 - Apr 2018",
-      exp4_p1_name: "AIS Project",
-      exp4_p1_desc:
+      exp5_company: "Nextwaver.NET",
+      exp5_period: "Jan 2018 - Apr 2018",
+      exp5_p1_name: "AIS Project",
+      exp5_p1_desc:
         "Develop web application PHR Profile, Develop Text recognition for Save profile in the book Profile, Develop Deep learning for Training software, Manage Data using .Net Core",
     },
     skills: {
@@ -100,7 +114,7 @@ export const translations = {
     },
     footer: {
       rights: "© 2024 Nakarin Weerasak. All rights reserved.",
-      role: "Full-Stack Developer",
+      role: "Senior Frontend Developer",
     },
   },
   th: {
@@ -112,69 +126,83 @@ export const translations = {
       contact: "ติดต่อ",
     },
     hero: {
-      subtitle: "นักพัฒนา Full-Stack ผู้มีประสบการณ์ด้าน DevOps",
+      subtitle: "ซีเนียร์นักพัฒนา Frontend ผู้มีประสบการณ์ Full-Stack",
       getInTouch: "ติดต่อฉัน",
       viewWork: "ดูผลงาน",
       scrollDown: "เลื่อนลง",
     },
     about: {
       title: "เกี่ยวกับฉัน",
-      p1: "ผมคือนักพัฒนา Full-Stack ที่มีความหลงใหลในเทคโนโลยีเว็บสมัยใหม่และมีประสบการณ์การทำงานจริงด้าน DevOps ผมมีความเชี่ยวชาญตั้งแต่ Frontend framework เช่น React, Vue, และ Svelte ไปจนถึง Backend อย่าง Node.js, NestJS, และ Go เพื่อสร้างแอปพลิเคชันที่รองรับการขยายตัวและมีประสิทธิภาพสูง",
-      p2: "ประสบการณ์ของผมรวมถึงการนำทีม การออกแบบสถาปัตยกรรมระบบ และการจัดทำ CI/CD pipeline ผมมีความสนใจเป็นพิเศษในเรื่องโครงสร้างพื้นฐานคลาวด์ การทำ Containerization และระบบอัตโนมัติ เพื่อส่งมอบโซลูชันที่แข็งแกร่ง",
+      p1: "ผมเป็น Senior Frontend Developer ที่ TechleadNext ทำหน้าที่พัฒนา Portal หลักของบริษัทด้วย React, TypeScript และ Design System แบบ Token-driven จากประสบการณ์กว่า 8 ปี ผมสร้างซอฟต์แวร์ที่ใช้งานจริงครบทั้ง Stack ตั้งแต่ Frontend ด้วย Svelte/SvelteKit และ React, Backend ด้วย Node.js (Express, Fastify, NestJS, Prisma) ไปจนถึงแอปมือถือด้วย Flutter และ Swift สำหรับลูกค้าธนาคาร โทรคมนาคม และองค์กร",
+      p2: "ผมเคยนำทีมพัฒนาแอป Cross-Platform สำหรับธนาคาร (Customer 360 ของ TTB), ดูแล Design System ร่วมกับ Storybook และวางระบบ CI/CD ตั้งแต่ Jenkins, GitLab CI จนถึง GitHub Actions ช่วงหลังผมเน้นงาน Design System, UI Architecture และการใช้เครื่องมือ AI/LLM เพื่อยกระดับ Workflow ของนักพัฒนา",
       yearsExp: "ปีแห่งประสบการณ์",
       projectsCompleted: "โปรเจกต์ที่สำเร็จ",
       technologies: "เทคโนโลยี",
     },
     experience: {
-      title: "ประสบการณ์การทำงาน",
+      title: "ประสบการณ์ทำงาน",
       role_frontend: "นักพัฒนา Frontend",
       role_fullstack: "นักพัฒนา Full Stack",
+      role_senior_frontend: "ซีเนียร์นักพัฒนา Frontend",
       role_senior_lead: "ซีเนียร์โปรแกรมเมอร์ & เทคนิคคัลลีด",
-      exp1_company: "ODT",
-      exp1_period: "พ.ค. 2022 - ปัจจุบัน",
-      exp1_p1_name:
-        "โปรเจกต์ TTB (ทีม Retail Lending, ทีม Common Apply, ทีม Tep)",
+      exp1_company: "TechleadNext",
+      exp1_period: "เม.ย. 2026 - ปัจจุบัน",
+      exp1_p1_name: "Portal 2.0 (แพลตฟอร์ม Portal ระดับองค์กร)",
       exp1_p1_desc:
-        "• ทีม Retail Lending: พัฒนาเว็บแอปพลิเคชัน (ระบบสินเชื่อและบัตรเครดิต) ด้วย React\n• ทีม Common Apply: พัฒนาแอปพลิเคชัน Native iOS (สำหรับลูกค้า NTB - New To Bank) ด้วย Swift\n• ทีม Tep: นำทีมพัฒนาแอปพลิเคชัน Cross-Platform ภายในองค์กร (Customer 360) ด้วย Flutter สำหรับพนักงาน Call Center และพนักงานหน้าสาขาของธนาคาร TTB โดยอิมพลีเมนต์ฟีเจอร์ระดับ Enterprise ที่ซับซ้อน เช่น โปรไฟล์ลูกค้าแบบ 360 องศา, ข้อมูลผลิตภัณฑ์ที่ถือครอง (สินทรัพย์และหนี้สิน), ประวัติ Touchpoint และ Case, ระบบจัดการสิทธิ์ (RBAC), ข้อมูลเชิงลึกและ Customer Suitability, ระบบข้อความเฉพาะบุคคล (Personalized Message) และการเชื่อมต่อระบบ CRM เพื่อยกระดับประสิทธิภาพการให้บริการลูกค้า",
-      exp1_p2_name: "a-chieve (วิสาหกิจเพื่อสังคม)",
+        "Senior Frontend Developer ของแพลตฟอร์มหลักของบริษัท พัฒนา Frontend ด้วย React และ TypeScript บน Design System แบบ Token-driven (Tailwind CSS v4) พร้อมซิงก์โค้ดกับ Figma ผ่านเอกสาร Component, Pattern และกระบวนการ Drift-check ร่วมพัฒนา Backend Service ด้วย Node.js (สถาปัตยกรรมแบบ Express, Prisma + PostgreSQL) ครอบคลุมระบบสิทธิ์ (RBAC), การแจ้งเตือน, สื่อ (Media) และงานตั้งเวลา (Scheduled Jobs)",
+      exp1_p2_name:
+        "Design System & Component Library (Portal 2.0 / PayGenix)",
       exp1_p2_desc:
-        "พัฒนาระบบแพลตฟอร์มแบบครบวงจร ประกอบด้วย:\n• Web Application สำหรับนักเรียนนักศึกษา: พื้นที่แนะแนวและเครื่องมือค้นหาตัวเองสำหรับผู้ที่สนใจ\n• To School Web Application: แพลตฟอร์มสำหรับครูแนะแนวเพื่อติดตามและดูแลนักเรียนในความดูแล\n• Admin CMS (Content Management System): ระบบจัดการข้อมูลหลังบ้านสำหรับ Admin ในการอัปเดตรายละเอียดระบบและบทความต่างๆ\n• Report System: ระบบรายงานและสรุปผลข้อมูลสำหรับทั้งครูและ Admin",
-      exp1_p3_name: "โปรเจกต์ KhunaiStory (โปรเจกต์ส่วนตัว)",
+        "สร้างและดูแล Design System กลางที่ใช้ร่วมกันในทุกผลิตภัณฑ์ของบริษัท (Portal 2.0, PayGenix Merchant Dashboard): Component แบบ React + Tailwind ที่รองรับธีมแยกต่อโปรเจกต์, Storybook Catalogue ของทุก Component ทุก Variant และ State และสถาปัตยกรรม Token (Foundations + Semantic Tokens) ที่สะท้อน Figma ต้นฉบับ รวมถึงตั้งค่าระบบ Publish แพ็กเกจ npm ขึ้น GitHub Packages พร้อมตรวจสอบ Release tag อัตโนมัติด้วย GitHub Actions CI",
+      exp1_p3_name: "AI Agent & เครื่องมือสนับสนุนนักพัฒนา",
       exp1_p3_desc:
+        "พัฒนาเครื่องมือภายในที่ขับเคลื่อนด้วย AI: AI Agent สำหรับ Workflow ของ Portal (Automation ด้วย Shell Script) และการเชื่อมต่อ LLM ผ่าน Anthropic API รวมถึงระบบตรวจ PR บน GitHub แบบอัตโนมัติ โดยเน้นประโยชน์จริงต่อนักพัฒนา เช่น Code Review, การทำงานอัตโนมัติ และ Integration Testing",
+
+      exp2_company: "ODT",
+      exp2_period: "พ.ค. 2022 - มี.ค. 2026",
+      exp2_p1_name:
+        "โปรเจกต์ TTB (ทีม Retail Lending, ทีม Common Apply, ทีม Tep)",
+      exp2_p1_desc:
+        "• ทีม Retail Lending: พัฒนาเว็บแอปพลิเคชัน (ระบบสินเชื่อและบัตรเครดิต) ด้วย React\n• ทีม Common Apply: พัฒนาแอปพลิเคชัน Native iOS (สำหรับลูกค้า NTB - New To Bank) ด้วย Swift\n• ทีม Tep: นำทีมพัฒนาแอปพลิเคชัน Cross-Platform ภายในองค์กร (Customer 360) ด้วย Flutter สำหรับพนักงาน Call Center และพนักงานหน้าสาขาของธนาคาร TTB โดยอิมพลีเมนต์ฟีเจอร์ระดับ Enterprise ที่ซับซ้อน เช่น โปรไฟล์ลูกค้าแบบ 360 องศา, ข้อมูลผลิตภัณฑ์ที่ถือครอง (สินทรัพย์และหนี้สิน), ประวัติ Touchpoint และ Case, ระบบจัดการสิทธิ์ (RBAC), ข้อมูลเชิงลึกและ Customer Suitability, ระบบข้อความเฉพาะบุคคล (Personalized Message) และการเชื่อมต่อระบบ CRM เพื่อยกระดับประสิทธิภาพการให้บริการลูกค้า",
+      exp2_p2_name: "a-chieve (วิสาหกิจเพื่อสังคม)",
+      exp2_p2_desc:
+        "พัฒนาระบบแพลตฟอร์มแบบครบวงจร ประกอบด้วย:\n• Web Application สำหรับนักเรียนนักศึกษา: พื้นที่แนะแนวและเครื่องมือค้นหาตัวเองสำหรับผู้ที่สนใจ\n• To School Web Application: แพลตฟอร์มสำหรับครูแนะแนวเพื่อติดตามและดูแลนักเรียนในความดูแล\n• Admin CMS (Content Management System): ระบบจัดการข้อมูลหลังบ้านสำหรับ Admin ในการอัปเดตรายละเอียดระบบและบทความต่างๆ\n• Report System: ระบบรายงานและสรุปผลข้อมูลสำหรับทั้งครูและ Admin",
+      exp2_p3_name: "โปรเจกต์ KhunaiStory (โปรเจกต์ส่วนตัว)",
+      exp2_p3_desc:
         "พัฒนาแอปพลิเคชันเรียนภาษาอังกฤษ (app.khunaistory.com) ผ่านการอ่านเรื่องราวสนุกๆ มีฟีเจอร์ AI จำลองสถานการณ์ (Role-play) โต้ตอบกับตัวละคร ระบบอ่านเรื่องราวแบบมีเสียงบรรยาย และแฟลชการ์ดสำหรับฝึกฝนคำศัพท์ (Oxford 3000) เน้นการสร้างประสบการณ์ที่เสมือนจริงและนำเทคโนโลยีมาใช้กับการศึกษา",
-      exp1_p4_name: "Storage and Cookies Manager (Chrome Extension)",
-      exp1_p4_desc:
+      exp2_p4_name: "Storage and Cookies Manager (Chrome Extension)",
+      exp2_p4_desc:
         "พัฒนาและเผยแพร่ส่วนขยาย (Extension) Open-source บน Google Chrome (https://chromewebstore.google.com/detail/storage-and-cookies-manag/oohieppjjpdgidfhdlcjfpfmhkpflbcc) ซึ่งออกแบบมาสำหรับ Web Developers โดยเฉพาะ ปัจจุบันมีผู้ใช้งานมากกว่า 1,000+ คน ฟีเจอร์หลักประกอบด้วยการดู, แก้ไข, เพิ่ม, และลบข้อมูล Cookies, LocalStorage, และ SessionStorage ได้แบบเรียลไทม์ พัฒนาด้วย Svelte และ HTML/CSS โดยเน้นการออกแบบ UI ที่ใช้งานง่ายและสอดคล้องกับมาตรฐานความปลอดภัย Manifest V3 ของ Chrome",
-      exp1_p5_name: "PCW Cleaning Assessment (Web Application ฟรี)",
-      exp1_p5_desc:
+      exp2_p5_name: "PCW Cleaning Assessment (Web Application ฟรี)",
+      exp2_p5_desc:
         "พัฒนา Web Application ให้ทางโรงเรียน PCW ใช้งานแบบไม่มีค่าใช้จ่าย (https://cleaning.pcw.ac.th/) เพื่อให้ระบบคณะกรรมการสภานักเรียนใช้บันทึกคะแนนและประเมินการทำความสะอาดห้องเรียนที่รับผิดชอบแบบรายวัน พร้อมระบบแสดงรายงาน (Reporting System) ที่ให้ครูประจำชั้น, นักเรียน, และบุคลากรต่างๆ สามารถเข้ามาตรวจสอบผลการประเมินได้อย่างโปร่งใสและสะดวก",
 
-      exp2_company: "Hi-Q Food Products Co., Ltd.",
-      exp2_period: "ต.ค. 2019 – พ.ค. 2022",
-      exp2_p1_name: "แอปพลิเคชันใช้งานภายในและสาธารณะ",
-      exp2_p1_desc:
+      exp3_company: "Hi-Q Food Products Co., Ltd.",
+      exp3_period: "ต.ค. 2019 – พ.ค. 2022",
+      exp3_p1_name: "แอปพลิเคชันใช้งานภายในและสาธารณะ",
+      exp3_p1_desc:
         "บริหารจัดการทีมแบบ Agile และมีการประชุมรายวันด้วย Scrum. พัฒนาระบบยืนยันตัวตนด้วย sessions, cookies, และ JWT. พัฒนาแอปพลิเคชัน SSR ด้วย SvelteKit และฐานข้อมูล PostgreSQL, Prisma ORM. อิมพลีเมนต์ระบบยืนยันตัวตนด้วย Session Cookie, JWT, และ Keycloak. เซ็ตอัประบบเครือข่ายสำหรับ On-premises infrastructure. ใช้ Proxmox จัดการ VM. จัดการการ Deploy ด้วย Docker Nginx. จัดการโปรเจกต์บางส่วนบน Kubernetes. สร้างระบบ CI/CD อัตโนมัติด้วย Jenkins หรือ GitLab CI. ทำ Reverse proxy ด้วย Nginx Proxy Manager และจัดการ DNS ด้วย PowerDNS.",
-      exp2_kp1:
+      exp3_kp1:
         "แอปพลิเคชัน Felina Canino: พัฒนา Frontend ด้วย Svelte และ Backend ด้วย NestJS เพื่อเชื่อมต่อกับ API ของ Navision ใช้ฐานข้อมูล MongoDB และ MS SQL.",
-      exp2_kp2:
+      exp3_kp2:
         "Line Official Account (ระบบสะสมแต้ม): พัฒนา Full-stack ด้วย Svelte ทำงานร่วมกับ Liff Framework ของ Line.",
-      exp2_kp3:
+      exp3_kp3:
         "แพลตฟอร์มจัดการ HR: สร้าง Backend ด้วย Express และ MongoDB ผ่าน Strapi V2.",
-      exp2_kp4:
+      exp3_kp4:
         "แอปพลิเคชันทำแบบสอบถามบนมือถือ: โซลูชันบน Flutter ที่มีการเชื่อมต่อกับ Firebase.",
-      exp2_kp5:
+      exp3_kp5:
         "แอปพลิเคชัน Jobber: จัดทำ Backend ที่มีประสิทธิภาพด้วย Fastify ร่วมกับสถาปัตยกรรมฐานข้อมูลแบบคู่.",
 
-      exp3_company: "Saraff Infotech Co., Ltd (ประจำไซต์ AIS)",
-      exp3_period: "ก.ค. 2018 - ต.ค. 2019",
-      exp3_p1_name: "โปรเจกต์ AIS (Kiosk & E-Service)",
-      exp3_p1_desc:
+      exp4_company: "Saraff Infotech Co., Ltd (ประจำไซต์ AIS)",
+      exp4_period: "ก.ค. 2018 - ต.ค. 2019",
+      exp4_p1_name: "โปรเจกต์ AIS (Kiosk & E-Service)",
+      exp4_p1_desc:
         "พัฒนาระบบ Web Application สำหรับให้บริการลูกค้าแบบ Self-service บนตู้ Kiosk ของ AIS (https://www.ais.th/) ที่ติดตั้งสาขาทั่วประเทศ รับผิดชอบหลักในส่วน Frontend โดยพัฒนาฟีเจอร์สำคัญ เช่น ระบบนำเสนอและสั่งซื้อเครื่องโทรศัพท์มือถือใหม่พร้อมแพ็กเกจ (New Device Purchase), ระบบย้ายค่ายเบอร์เดิม (Mobile Number Portability - MNP), และระบบจัดการข้อมูล/แพ็กเกจสำหรับลูกค้าระบบเติมเงิน (Prepaid) และรายเดือน (Postpaid) นอกจากนี้ยังพัฒนาบริการ API (API Service) เพื่อเชื่อมต่อระหว่างหน้าจอ Kiosk กับระบบ Backend หลักของทาง AIS เพื่อส่งมอบประสบการณ์ใช้งานที่รวดเร็วและไร้รอยต่อ",
 
-      exp4_company: "Nextwaver.NET",
-      exp4_period: "ม.ค. 2018 - เม.ย. 2018",
-      exp4_p1_name: "โปรเจกต์ AIS",
-      exp4_p1_desc:
+      exp5_company: "Nextwaver.NET",
+      exp5_period: "ม.ค. 2018 - เม.ย. 2018",
+      exp5_p1_name: "โปรเจกต์ AIS",
+      exp5_p1_desc:
         "พัฒนาเว็บแอปพลิเคชันสร้างโปรไฟล์ PHR Profile, พัฒนาระบบ Text recognition เพื่อบันทึกข้อมูลเข้าสู่ระบบ, พัฒนา Deep learning สำหรับซอฟต์แวร์เทรนนิ่ง, จัดการข้อมูลด้วย .Net Core",
     },
     skills: {
@@ -203,7 +231,7 @@ export const translations = {
     },
     footer: {
       rights: "© 2024 นครินทร์ วีระศักดิ์ สงวนลิขสิทธิ์",
-      role: "นักพัฒนา Full-Stack",
+      role: "ซีเนียร์นักพัฒนา Frontend",
     },
   },
 };
