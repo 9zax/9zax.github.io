@@ -1,0 +1,1 @@
+import{d as c,w as i}from"./Ba7lm9fy.js";import{t as r}from"./DGgFRDTB.js";const f=i("en"),p=()=>{f.update(n=>n==="en"?"th":"en")},m=c(f,n=>o=>{const a=o.split(".");let e=r[n];for(const s of a)if(e&&e[s]!==void 0)e=e[s];else{let t=r.en;for(const l of a)if(t&&t[l]!==void 0)t=t[l];else return o;return t}return e});export{m as a,f as l,p as t};
