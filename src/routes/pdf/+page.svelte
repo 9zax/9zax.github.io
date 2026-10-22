@@ -72,6 +72,20 @@
             "TypeScript",
           ],
         },
+        {
+          name: t.experience.exp1_p4_name,
+          role: t.experience.role_fullstack,
+          description: t.experience.exp1_p4_desc,
+          technologies: [
+            "Chrome MV3",
+            "OpenAI Realtime API",
+            "WebSocket Relay",
+            "Gemini API",
+            "Google TTS",
+            "Tauri",
+            "Typhoon ASR",
+          ],
+        },
       ],
     },
     {
@@ -183,6 +197,13 @@
   ];
 
   const skills = {
+    ai: [
+      "AI-assisted development (Claude Code)",
+      "Agentic workflows (hooks, skills, subagents)",
+      "Anthropic API (Claude)",
+      "OpenAI Realtime API (STT)",
+      "Thai ASR & speaker diarization (Typhoon)",
+    ],
     language: [
       "JavaScript",
       "TypeScript",
@@ -450,6 +471,16 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td
+              class="border border-zinc-300 p-3 font-bold text-zinc-900 align-top"
+              >{t.skills.ai}</td
+            >
+            <td
+              class="border border-zinc-300 p-3 text-xs text-zinc-700 leading-relaxed font-medium"
+              >{skills.ai.join(", ")}</td
+            >
+          </tr>
           <tr>
             <td
               class="border border-zinc-300 p-3 font-bold text-zinc-900 align-top"

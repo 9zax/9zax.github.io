@@ -89,6 +89,20 @@
             "TypeScript",
           ],
         },
+        {
+          name: $t("experience.exp1_p4_name"),
+          role: "Full Stack",
+          description: $t("experience.exp1_p4_desc"),
+          technologies: [
+            "Chrome MV3",
+            "OpenAI Realtime API",
+            "WebSocket Relay",
+            "Gemini API",
+            "Google TTS",
+            "Tauri",
+            "Typhoon ASR",
+          ],
+        },
       ],
     },
     {
@@ -204,6 +218,13 @@
   ];
 
   const skills = {
+    ai: [
+      "AI-assisted development (Claude Code)",
+      "Agentic workflows (hooks, skills, subagents)",
+      "Anthropic API (Claude)",
+      "OpenAI Realtime API (STT)",
+      "Thai ASR & speaker diarization (Typhoon)",
+    ],
     language: [
       "JavaScript",
       "TypeScript",
@@ -263,7 +284,6 @@
     ],
     other: [
       "Storybook",
-      "Anthropic API (LLM)",
       "Chrome Extension (MV3)",
       "Wails",
       "Tauri",

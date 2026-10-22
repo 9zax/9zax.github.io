@@ -16,7 +16,7 @@ export const translations = {
     about: {
       title: "About Me",
       p1: "I'm a Senior Frontend Developer at TechleadNext, building the company's core enterprise portal with React, TypeScript, and a token-driven design system. Over 8 years I've shipped production software across the stack — Svelte/SvelteKit and React frontends, Node.js backends (Express, Fastify, NestJS, Prisma), and mobile apps in Flutter and Swift for banking, telecom, and enterprise clients.",
-      p2: "My background includes leading the development of a cross-platform banking app (Customer 360 for TTB), maintaining a shared design system with Storybook, and setting up CI/CD pipelines from Jenkins and GitLab CI to GitHub Actions. Lately I focus on design systems, UI architecture, and using AI/LLM tooling to improve developer workflows.",
+      p2: "My background includes leading the development of a cross-platform banking app (Customer 360 for TTB), maintaining a shared design system with Storybook, and setting up CI/CD pipelines from Jenkins and GitLab CI to GitHub Actions. I develop AI-first: AI coding agents (Claude Code) with my own hooks and skills are my daily working environment, and I ship LLM-powered product features through the Anthropic API.",
       yearsExp: "Years Experience",
       projectsCompleted: "Projects Completed",
       technologies: "Technologies",
@@ -31,14 +31,16 @@ export const translations = {
       exp1_period: "Apr 2026 - Present",
       exp1_p1_name: "Portal 2.0 (Enterprise Portal Platform)",
       exp1_p1_desc:
-        "Senior Frontend Developer for the company's core enterprise platform. Build the web frontend with React and TypeScript on a token-driven design system (Tailwind CSS v4), keeping code and Figma in sync through documented components, patterns, and drift-check workflows. Also contribute to the Node.js backend services (Express-style architecture with Prisma and PostgreSQL) covering RBAC, notifications, media, and scheduled jobs.",
-      exp1_p2_name:
-        "Design System & Component Library (Portal 2.0 / PayGenix)",
+        "Senior Frontend Developer for the company's core enterprise platform. Build the web frontend with React and TypeScript on a token-driven design system (Tailwind CSS v4), keeping code and Figma in sync through documented components, patterns, and drift-check workflows. Also contribute to the Node.js backend services (Express-style architecture with Prisma and PostgreSQL) covering RBAC, notifications, media, and scheduled jobs. Day-to-day development is AI-agent-assisted (Claude Code) — spec-driven tasks, automated PR review, and CI.",
+      exp1_p2_name: "Design System & Component Library (Portal 2.0)",
       exp1_p2_desc:
-        "Build and maintain the shared design system used across all company products (Portal 2.0, PayGenix Merchant Dashboard): coded React + Tailwind components with per-project theming, a Storybook catalogue of every component's variants and states, and a token architecture (foundations + semantic tokens) mirroring the Figma source of truth. Set up automated npm publishing to GitHub Packages with release-tag verification via GitHub Actions CI.",
+        "Build and maintain the shared design system behind Portal 2.0: coded React + Tailwind components with per-project theming, a Storybook catalogue of every component's variants and states, and a token architecture (foundations + semantic tokens) mirroring the Figma source of truth. Set up automated npm publishing to GitHub Packages with release-tag verification via GitHub Actions CI.",
       exp1_p3_name: "AI Agent & Developer Tooling",
       exp1_p3_desc:
         "Develop AI-powered internal tooling: an AI agent for portal workflows (shell-based automation) and LLM integrations using the Anthropic API, including an automated GitHub PR reviewer. Focused on practical developer-experience gains — code review, workflow automation, and integration testing.",
+      exp1_p4_name: "Mali Meeting (AI Meeting Assistant)",
+      exp1_p4_desc:
+        "Built the Mali Meeting product line — AI meeting assistants for Thai teams. The core is a Chrome (MV3) side-panel extension that captures meeting audio (tab + mic, macOS loopback) and streams live Thai captions via OpenAI Realtime through a WebSocket relay that keeps API keys server-side, then auto-drafts summaries and files action items to Jira/Notion/GitHub. Related components include an AI bot that joins Google Meet and speaks via Gemini + Google TTS, and a Tauri desktop app doing Thai transcription with speaker diarization (Typhoon ASR).",
 
       exp2_company: "ODT",
       exp2_period: "May 2022 - Mar 2026",
@@ -89,6 +91,7 @@ export const translations = {
     },
     skills: {
       title: "Technical Expertise",
+      ai: "AI & LLM",
       language: "Programming Languages",
       frontend: "Frontend",
       backend: "Backend",
@@ -134,7 +137,7 @@ export const translations = {
     about: {
       title: "เกี่ยวกับฉัน",
       p1: "ผมเป็น Senior Frontend Developer ที่ TechleadNext ทำหน้าที่พัฒนา Portal หลักของบริษัทด้วย React, TypeScript และ Design System แบบ Token-driven จากประสบการณ์กว่า 8 ปี ผมสร้างซอฟต์แวร์ที่ใช้งานจริงครบทั้ง Stack ตั้งแต่ Frontend ด้วย Svelte/SvelteKit และ React, Backend ด้วย Node.js (Express, Fastify, NestJS, Prisma) ไปจนถึงแอปมือถือด้วย Flutter และ Swift สำหรับลูกค้าธนาคาร โทรคมนาคม และองค์กร",
-      p2: "ผมเคยนำทีมพัฒนาแอป Cross-Platform สำหรับธนาคาร (Customer 360 ของ TTB), ดูแล Design System ร่วมกับ Storybook และวางระบบ CI/CD ตั้งแต่ Jenkins, GitLab CI จนถึง GitHub Actions ช่วงหลังผมเน้นงาน Design System, UI Architecture และการใช้เครื่องมือ AI/LLM เพื่อยกระดับ Workflow ของนักพัฒนา",
+      p2: "ผมเคยนำทีมพัฒนาแอป Cross-Platform สำหรับธนาคาร (Customer 360 ของ TTB), ดูแล Design System ร่วมกับ Storybook และวางระบบ CI/CD ตั้งแต่ Jenkins, GitLab CI จนถึง GitHub Actions ผมพัฒนาแบบ AI-first: ใช้ AI coding agent (Claude Code) พร้อม hooks และ skills ที่ปรับแต่งเองเป็นสภาพแวดล้อมทำงานประจำวัน และส่งมอบฟีเจอร์ LLM ในผลิตภัณฑ์จริงผ่าน Anthropic API",
       yearsExp: "ปีแห่งประสบการณ์",
       projectsCompleted: "โปรเจกต์ที่สำเร็จ",
       technologies: "เทคโนโลยี",
@@ -149,14 +152,16 @@ export const translations = {
       exp1_period: "เม.ย. 2026 - ปัจจุบัน",
       exp1_p1_name: "Portal 2.0 (แพลตฟอร์ม Portal ระดับองค์กร)",
       exp1_p1_desc:
-        "Senior Frontend Developer ของแพลตฟอร์มหลักของบริษัท พัฒนา Frontend ด้วย React และ TypeScript บน Design System แบบ Token-driven (Tailwind CSS v4) พร้อมซิงก์โค้ดกับ Figma ผ่านเอกสาร Component, Pattern และกระบวนการ Drift-check ร่วมพัฒนา Backend Service ด้วย Node.js (สถาปัตยกรรมแบบ Express, Prisma + PostgreSQL) ครอบคลุมระบบสิทธิ์ (RBAC), การแจ้งเตือน, สื่อ (Media) และงานตั้งเวลา (Scheduled Jobs)",
-      exp1_p2_name:
-        "Design System & Component Library (Portal 2.0 / PayGenix)",
+        "Senior Frontend Developer ของแพลตฟอร์มหลักของบริษัท พัฒนา Frontend ด้วย React และ TypeScript บน Design System แบบ Token-driven (Tailwind CSS v4) พร้อมซิงก์โค้ดกับ Figma ผ่านเอกสาร Component, Pattern และกระบวนการ Drift-check ร่วมพัฒนา Backend Service ด้วย Node.js (สถาปัตยกรรมแบบ Express, Prisma + PostgreSQL) ครอบคลุมระบบสิทธิ์ (RBAC), การแจ้งเตือน, สื่อ (Media) และงานตั้งเวลา (Scheduled Jobs) งานประจำวันพัฒนาแบบ AI-agent-assisted (Claude Code) ตั้งแต่ spec-driven tasks, ระบบตรวจ PR อัตโนมัติ ไปจนถึง CI",
+      exp1_p2_name: "Design System & Component Library (Portal 2.0)",
       exp1_p2_desc:
-        "สร้างและดูแล Design System กลางที่ใช้ร่วมกันในทุกผลิตภัณฑ์ของบริษัท (Portal 2.0, PayGenix Merchant Dashboard): Component แบบ React + Tailwind ที่รองรับธีมแยกต่อโปรเจกต์, Storybook Catalogue ของทุก Component ทุก Variant และ State และสถาปัตยกรรม Token (Foundations + Semantic Tokens) ที่สะท้อน Figma ต้นฉบับ รวมถึงตั้งค่าระบบ Publish แพ็กเกจ npm ขึ้น GitHub Packages พร้อมตรวจสอบ Release tag อัตโนมัติด้วย GitHub Actions CI",
+        "สร้างและดูแล Design System กลางเบื้องหลัง Portal 2.0: Component แบบ React + Tailwind ที่รองรับธีมแยกต่อโปรเจกต์, Storybook Catalogue ของทุก Component ทุก Variant และ State และสถาปัตยกรรม Token (Foundations + Semantic Tokens) ที่สะท้อน Figma ต้นฉบับ รวมถึงตั้งค่าระบบ Publish แพ็กเกจ npm ขึ้น GitHub Packages พร้อมตรวจสอบ Release tag อัตโนมัติด้วย GitHub Actions CI",
       exp1_p3_name: "AI Agent & เครื่องมือสนับสนุนนักพัฒนา",
       exp1_p3_desc:
         "พัฒนาเครื่องมือภายในที่ขับเคลื่อนด้วย AI: AI Agent สำหรับ Workflow ของ Portal (Automation ด้วย Shell Script) และการเชื่อมต่อ LLM ผ่าน Anthropic API รวมถึงระบบตรวจ PR บน GitHub แบบอัตโนมัติ โดยเน้นประโยชน์จริงต่อนักพัฒนา เช่น Code Review, การทำงานอัตโนมัติ และ Integration Testing",
+      exp1_p4_name: "Mali Meeting (ผู้ช่วยประชุมด้วย AI)",
+      exp1_p4_desc:
+        "พัฒนาสายผลิตภัณฑ์ Mali Meeting — ผู้ช่วยประชุมด้วย AI สำหรับทีมคนไทย หัวใจหลักคือ Chrome Extension (MV3) แบบ side-panel ที่จับเสียงประชุม (เสียงแท็บ + ไมค์ รวมถึง Loopback บน macOS) แล้วถอดข้อความภาษาไทยแบบสดผ่าน OpenAI Realtime โดยมี WebSocket relay เก็บ API key ไว้ฝั่งเซิร์ฟเวอร์ พร้อมสรุปการประชุมอัตโนมัติและแปลง action items ไปเป็น Jira/Notion/GitHub Issues ส่วนประกอบที่เกี่ยวข้อง ได้แก่ AI bot ที่เข้าร่วม Google Meet อัตโนมัติและตอบด้วยเสียงผ่าน Gemini + Google TTS และแอป Tauri บนเดสก์ท็อปสำหรับถอดเสียงภาษาไทยพร้อมแยกผู้พูด (Typhoon ASR)",
 
       exp2_company: "ODT",
       exp2_period: "พ.ค. 2022 - มี.ค. 2026",
@@ -207,6 +212,7 @@ export const translations = {
     },
     skills: {
       title: "ความเชี่ยวชาญทางเทคนิค",
+      ai: "AI และ LLM",
       language: "ภาษาโปรแกรม (Languages)",
       frontend: "มิติผู้ใช้งาน (Frontend)",
       backend: "ระบบหลังบ้าน (Backend)",
